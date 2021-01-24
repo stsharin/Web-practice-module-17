@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+</head>
+<body>
+    <h3>EXploring JS</h3>
+    <p class="author">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eius excepturi! Maxime facere neque ipsa cumque molestiae incidunt vitae, non quam, similique excepturi enim delectus doloribus magni, fugiat hic repudiandae.</P>
+    <p id="second">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <ul id="gift-list">
+        <li>gift-1</li>
+        <li>gift-2</li>
+        <li>gift-3</li>
+    </ul>
+
+    <script>
+        const para = document.getElementById("second");
+        // second.style.color = "green";
+
+        // var authors = document.getElementsByClassName("author");
+        // for (var i=0; i<authors.length; i++){
+        //     var element = authors[i];
+        //     element.style.backgroundColor = "lightblue";
+        //     element.style.margin = "10px";
+        // }
+        const newP = document.createElement("p");
+        newP.innerHTML = "This is added by JavaScript";
+        para.appendChild(newP);
+
+        // adding one more item to the gift list
+        const ul = document.getElementById("gift-list");
+        const li = document.createElement("li");
+        li.innerHTML = "New gift";
+        ul.appendChild(li);
+
+    </script>
+</body>
+</html>
